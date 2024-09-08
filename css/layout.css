@@ -1,0 +1,28 @@
+.top {
+
+    background-color: whitesmoke;
+    width: 100%;
+    height: 100px;
+}
+
+.left {
+
+    width: 100px;
+    height: 800px;
+    background-color: whitesmoke;
+}
+
+.main {
+
+    width: 90%;
+    height: 480px;
+    background-color: whitesmoke;
+}
+
+.bottom {
+
+    background-color: whitesmoke;
+    width: 100%;
+    height: 100px;
+    clear: both;
+}
