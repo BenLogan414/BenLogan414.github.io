@@ -17,6 +17,17 @@ body {
     padding: 20px;
 }
 
+#welcome {
+
+    width: 1000px;
+    background-color: whitesmoke;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
+    text-align: center;
+    font-size: 2.5em;
+}
+
 h1 {
 
     color: black;
