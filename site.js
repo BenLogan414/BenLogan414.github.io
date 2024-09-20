@@ -13,3 +13,5 @@ if (getHours = isMorning) {
 } else if (getHours = isEvening) {
     article.textContent = 'Good Evening!'
 }
+
+localStorage.setItem("It's a secret to everybody.", "WHO DO YOU THINK YOU ARE I AM")
