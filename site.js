@@ -1,8 +1,10 @@
+// Assignment 5
 setInterval(() => {
     currentImage++
     showImages()
 }, 5000)
 
+// Assignment 3
 const article = document.querySelector('article')
 const hours = new Date().getHours() // get the current hour
 
@@ -18,8 +20,10 @@ if (getHours = isMorning) {
     article.textContent = 'Good Evening!'
 }
 
+// Assignment 4
 localStorage.setItem("It's a secret to everybody.", "WHO DO YOU THINK YOU ARE I AM")
 
+// Assignment 5
 const urls = [
     'https://images.pexels.com/photos/1454360/pexels-photo-1454360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     'https://images.pexels.com/photos/933964/pexels-photo-933964.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
@@ -57,3 +61,27 @@ next.addEventListener('click', () => {
     currentImage++
     showImages()
 })
+
+// Assignment 6
+const todoInput = document.getElementById('new-todo')
+const todos = JSON.parse(localStorage.getItem('todo-list')) || []
+const todoList = document.getElementById('todo-list')
+
+addItem.addEventListener('click', () => {
+    todos.push({ text: todoInput.value, completed: false })
+    localStorage.setItem('todo-list', JSON.stringify(todos))
+    renderTodos()
+    
+})
+
+
+const renderTodos = () => {
+    todoList.innerHTML = ''
+    todos.forEach(todo => {
+        const li = document.createElement('li')
+        li.textContent = todo.text
+        todoList.append(li)
+    })
+}
+
+renderTodos()
