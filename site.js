@@ -85,3 +85,28 @@ const renderTodos = () => {
 }
 
 renderTodos()
+
+// Assignment 7
+const pokemonImage = document.getElementById('pokemon-image');
+
+(async () => {
+
+    const getRandomPokemon = async () => {
+        const url = 'https://pokeapi.co/api/v2/pokemon/' + Math.floor(Math.random() * 150);
+        const response = await fetch(url)
+        const json = await response.json()
+        const { name } = json
+        front_default = json.sprites.front_default
+        return { name, front_default }
+    }
+
+    const renderPokemon = ({ name, front_default }) => {
+        const img = document.createElement('img')
+        img.src = front_default
+        img.alt = name
+        pokemonImage.append(img)
+    }
+
+    renderPokemon(await getRandomPokemon())
+
+})()
